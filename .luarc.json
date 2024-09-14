@@ -1,0 +1,10 @@
+{
+  "diagnostics.globals": [
+    "BuffFrame",
+    "CreateFrame",
+    "DebuffFrame",
+    "UIParent",
+    "hooksecurefunc"
+  ]
+}
+
