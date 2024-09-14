@@ -1,0 +1,8 @@
+## Interface: 110200
+
+## Title: Riphie Auras
+## Author: Riphie
+## IconTexture: Interface\AddOns\Riphie_Auras\media\monkey.tga
+
+config.lua
+core.lua
