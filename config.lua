@@ -1,4 +1,4 @@
-local A, L = ...
+local _, L = ...
 
 L.cfg = {
   buffs = {
@@ -6,8 +6,8 @@ L.cfg = {
       a1 = "TOPRIGHT",
       rel = UIParent,
       a2 = "TOPRIGHT",
-      x = -150,
-      y = 0,
+      x = -220,
+      y = -24,
     },
   },
 
@@ -16,8 +16,8 @@ L.cfg = {
       a1 = "TOPRIGHT",
       rel = UIParent,
       a2 = "TOPRIGHT",
-      x = 0,
-      y = 0,
+      x = -240,
+      y = -200,
     },
   },
 }
