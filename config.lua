@@ -4,9 +4,9 @@ L.cfg = {
   buffs = {
     pos = {
       a1 = "TOPRIGHT",
-      rel = "UIParent",
+      rel = UIParent,
       a2 = "TOPRIGHT",
-      x = 0,
+      x = -150,
       y = 0,
     },
   },
@@ -14,7 +14,7 @@ L.cfg = {
   debuffs = {
     pos = {
       a1 = "TOPRIGHT",
-      rel = "UIParent",
+      rel = UIParent,
       a2 = "TOPRIGHT",
       x = 0,
       y = 0,

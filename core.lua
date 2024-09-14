@@ -1,32 +1,17 @@
-local A, L = ...
-local cfg = L.cfg
+BuffFrame:ClearAllPoints()
+BuffFrame:SetPoint("TOPRIGHT", UIParent, "TOPRIGHT", -220, -24)
+BuffFrame.__SetPoint = BuffFrame.SetPoint
 
-local buffFrame = CreateFrame("Frame", "Riphie_BuffFrame", UIParent)
-
-local bSetPoint = buffFrame.SetPoint
-local bClearAllPoints = buffFrame.ClearAllPoints
-
-bClearAllPoints(BuffFrame)
-bSetPoint(BuffFrame)
-
-hooksecurefunc(BuffFrame, "SetPoint", function(frame)
-  bClearAllPoints(frame)
-  bSetPoint(frame, "TOPRIGHT", buffFrame, "TOPRIGHT")
+hooksecurefunc(BuffFrame, "SetPoint", function()
+  BuffFrame:ClearAllPoints()
+  BuffFrame:__SetPoint("TOPRIGHT", UIParent, "TOPRIGHT", -220, -24)
 end)
 
-buffFrame:SetPoint(cfg.buffs.pos.a1, cfg.buffs.pos.rel, cfg.buffs.pos.a2, cfg.buffs.pos.x, cfg.buffs.pos.y)
+DebuffFrame:ClearAllPoints()
+DebuffFrame:SetPoint("TOPRIGHT", UIParent, "TOPRIGHT", -240, -200)
+DebuffFrame.__SetPoint = BuffFrame.SetPoint
 
-local debuffFrame = CreateFrame("Frame", "Riphie_BuffFrame", UIParent)
-
-local dSetPoint = debuffFrame.SetPoint
-local dClearAllPoints = debuffFrame.ClearAllPoints
-
-dClearAllPoints(DebuffFrame)
-dSetPoint(DebuffFrame)
-
-hooksecurefunc(DebuffFrame, "SetPoint", function(frame)
-  dClearAllPoints(frame)
-  dSetPoint(frame, "TOPRIGHT", debuffFrame, "TOPRIGHT")
+hooksecurefunc(DebuffFrame, "SetPoint", function()
+  DebuffFrame:ClearAllPoints()
+  DebuffFrame:__SetPoint("TOPRIGHT", UIParent, "TOPRIGHT", -240, -200)
 end)
-
-buffFrame:SetPoint(cfg.debuffs.pos.a1, cfg.debuffs.pos.rel, cfg.debuffs.pos.a2, cfg.debuffs.pos.x, cfg.debuffs.pos.y)
